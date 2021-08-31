@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+:root {
+    --white: #fff;
+    --black: #111;
+    --darkBlue: #075275;
+}
+
+html {
+    box-sizing     : border-box;
+    font-size      : 62.5%;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: var(--white);
+    font-size: 16px;
+}
+
+li {
+    list-style: none;
+}
+
+/* ==============
+    Global Styles
+============== */
+
+.contenedor {
+    width : min(90%, 120rem);
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    font-size      : 1.8rem;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1rem;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-size: 5.8rem;
+    font-weight: 800;
+}
+
+h3 {
+    font-size: 5.3rem;
+    font-weight: 700;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* ==============
+    Utilities
+============== */
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-border {
+    border: 0;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+.toggle.active {
+    background: url(../img/close-line.png);
+    background-repeat: no-repeat;
+    background-size: 3.5rem;
+    background-position: center;
+    cursor: pointer;
+}
+
+.entrada.active {
+    right: 30rem;
+}
+
+/* ==============
+    Button Style
+============== */
+
+.info__button {
+    display: inline-block;
+    margin-top: 2rem;
+    color: var(--black);
+    text-transform: uppercase;
+    background-color: var(--white);
+    padding: 1.5rem 3rem;
+    letter-spacing: .2rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.info__button:hover {
+    letter-spacing: .4rem;
+}
+
+/* ==============
+    Custom Styles
+============== */
+
+/* ==============
+    Entrada
+============== */
+
+.entrada{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.entrada video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+/* ==============
+    Header
+============== */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4rem 10rem;
+    z-index: 15;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--white);
+}
+
+.toggle {
+    cursor: pointer;
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+    background: url(../img/menu-line.png);
+    background-repeat: no-repeat;
+    background-size: 3rem;
+    background-position: center;
+}
+
+@media (max-width: 768px) {
+    .entrada, .header {
+        padding: 2rem;
+    }
+    .info__h2 {
+        font-size: 3.7rem;
+    }
+    .info__h3 {
+        font-size: 2.9rem;
+    }
+}
+/* ==============
+    Overlay
+============== */
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--darkBlue);
+    mix-blend-mode: overlay;
+}
+
+/* ==============
+    Informacion
+============== */
+
+.info {
+    position: relative;
+    z-index: 10;
+}
+
+.info__p {
+    margin: 2rem 0;
+    font-weight: 400;
+    max-width: 70rem;
+}
+
+/* ==============
+    Redes
+============== */
+
+.redes {
+    position: absolute;
+    bottom: 2rem;
+    z-index: 10;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.red__enlace {
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.red__enlace:hover {
+    transform: translateY(-15px);
+}
+
+/* ==============
+    Navegation
+============== */
+
+.nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listado-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+}
+
+.item-nav__enlace {
+    color: var(--black);
+    font-size: 2.2rem;
+    transition: .1s;
+}
+
+.item-nav__enlace:hover {
+    color: var(--darkBlue);
+    font-weight: 600;
+}
